@@ -1,18 +1,34 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			persons: [{
+				name: "Carlos Rodriguez",
+				gender: "Male",
+				hairColor: "Brown",
+				eyeColor: "Brown",
+				uid: "1"
+
+			},
+			{
+				name: "Carlos Rodriguez",
+				gender: "Male",
+				hairColor: "Brown",
+				eyeColor: "Brown",
+				uid: "1"
+
+			},
+			{
+				name: "Carlos Rodriguez",
+				gender: "Male",
+				hairColor: "Brown",
+				eyeColor: "Brown",
+				uid: "1"
+
+			}],
+			planets: [],
+			vehicles: [],
+			favorites: [],
+			
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -24,20 +40,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			}
+			
+			addToFavorites: () => {},
+			deleteFromFavorites: () => {},
+			openSinglePerson: () => {},
+			openSinglePlanet: () => {},
+			openSingleVehicle: () => {},
+			
 		}
 	};
 };
