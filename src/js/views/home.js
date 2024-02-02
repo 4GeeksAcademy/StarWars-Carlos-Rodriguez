@@ -8,7 +8,6 @@ import { CardVehicle } from "../component/cardVehicle";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
-  console.log("Home");
 
   return (
     <div className="dark-bg">
@@ -19,14 +18,7 @@ export const Home = () => {
           </h1>
           <div className="d-flex flex-row overflow-x-auto col-9 m-2">
             {store.persons.map((person) => (
-              <CardPerson
-                key={person.uid}
-                name={person.name}
-                gender={person.gender}
-                hairColor={person.hairColor}
-                eyeColor={person.eyeColor}
-                uid={person.uid}
-              />
+              <CardPerson key={person.uid} name={person.name} />
             ))}
           </div>
           <h1 className="text-white p-4">
@@ -34,25 +26,15 @@ export const Home = () => {
           </h1>
           <div className="d-flex flex-row overflow-x-auto col-9 m-2">
             {store.planets.map((planet) => (
-              <CardPlanet
-                key={planet.uid}
-                population={planet.population}
-                terrain={planet.terrain}
-                uid={planet.uid}
-              />
+              <CardPlanet key={planet.uid} name={planet.name} />
             ))}
           </div>
-		  <h1 className="text-white p-4">
+          <h1 className="text-white p-4">
             <span className="text-warning">Vehicles</span>
           </h1>
           <div className="d-flex flex-row overflow-x-auto col-9 m-2">
             {store.vehicles.map((vehicle) => (
-              <CardVehicle
-                key={vehicle.uid}
-                name={vehicle.name}
-                model={vehicle.model}
-                uid={vehicle.uid}
-              />
+              <CardVehicle key={vehicle.uid} name={vehicle.name} />
             ))}
           </div>
         </div>

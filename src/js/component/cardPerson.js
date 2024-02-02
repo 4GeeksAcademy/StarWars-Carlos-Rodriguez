@@ -25,9 +25,7 @@ export const CardPerson = (props) => {
       >
         <div>
           <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">Gender: {props.gender}</p>
-          <p className="card-text">Hair-Color: {props.hairColor}</p>
-          <p className="card-text">Eye-Color: {props.eyeColor}</p>
+  
         </div>
         <div
           style={{

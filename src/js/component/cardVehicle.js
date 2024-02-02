@@ -25,7 +25,6 @@ export const CardVehicle = (props) => {
       >
         <div>
           <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">Model: {props.model}</p>
         </div>
         <div
           style={{

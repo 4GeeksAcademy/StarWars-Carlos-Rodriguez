@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { Context } from "../store/appContext";
+
+
 export const CardPlanet = (props) => {
+  const { store, actions } = useContext(Context);
+  const planetIds = store.planets.map((planet) => planet.uid);
+  const getIMG = (planetIds) => {
+    return `https://starwars-visualguide.com/assets/img/planets/1.jpg`
+  };
   return (
     <div
       className="card"
@@ -14,19 +22,13 @@ export const CardPlanet = (props) => {
         flexDirection: "column",
       }}
     >
-      <img
-        src={`https://starwars-visualguide.com/assets/img/planets/${props.uid}.jpg`}
-        className="card-img-top"
-        alt="..."
-      />
+      <img src={``} className="card-img-top" alt="..." />
       <div
         className="card-body"
         style={{ flex: "1", display: "flex", flexDirection: "column" }}
       >
         <div>
           <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">Population: {props.population}</p>
-          <p className="card-text">Terrain: {props.terrain}</p>
         </div>
         <div
           style={{
