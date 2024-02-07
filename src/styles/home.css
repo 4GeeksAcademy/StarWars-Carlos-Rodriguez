@@ -1,10 +1,19 @@
-.dark-bg {
-    background-color: black;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  .bg-body-tertiary {
-    background-color: #212529 !important;
-    color: white !important;
- 
-  }
+body {
+  background-color: black;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.card {
+  margin-right: 10px;
+}
+
+#footer {
+  background-color: #212529 !important;
+}

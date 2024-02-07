@@ -1,11 +1,9 @@
 import React from "react";
 
-
-export const Footer = () => (
-  <footer className="footer mt-auto py-3 text-center bg-body-tertiary">
-    <p>
-      Made with <i className="fa fa-heart text-danger" /> by
-      {" Carlos Rodriguez "}
-    </p>
-  </footer>
-);
+export const Footer = () => {
+  return (
+    <footer className="bg-dark text-white text-center p-3">
+      Made with <i className="fas fa-heart text-danger"></i> by Carlos Rodriguez
+    </footer>
+  );
+};
